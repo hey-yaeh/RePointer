@@ -1,0 +1,32 @@
+{
+  "acceptance_status": "B0_P0C_M1_FULL_5FOLD_ACCEPTED",
+  "counts": {
+    "candidate_rows": 42925,
+    "files_hashed": 7692,
+    "folds": 5,
+    "manifest_files": 7692,
+    "motion_schemas_checked": 7575,
+    "samples": 2525,
+    "selected_motions": 7575
+  },
+  "errors": {},
+  "fold_sample_counts": [
+    503,
+    509,
+    506,
+    506,
+    501
+  ],
+  "full_reproduction_validated": false,
+  "generation_rerun": false,
+  "hash_scope": "all_manifest_files",
+  "motion_schema_scope": "all_selected_motions",
+  "official_evaluation_run": false,
+  "reference_bound": true,
+  "schema": "repointer.m1-audit.v1",
+  "status": "PASS",
+  "warnings": {
+    "append_only_fold_logs": 5,
+    "append_only_logs": 1
+  }
+}

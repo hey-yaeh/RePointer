@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-08-10T18:19:59+00:00",
+  "exact_private_detector_recovered": false,
+  "guardrails_for_p0c": [
+    "Generate one clear high-extension low-velocity apex/hold rather than relying on detector perfection.",
+    "Rerank with agreement between source logreg_raw, refined detector, and a reach-stability heuristic when freeze_mode is advisory.",
+    "Report oracle-peak and self-detected-apex metrics separately.",
+    "Use official server scores as final source of truth."
+  ],
+  "input_exclusions": [
+    "speech",
+    "text",
+    "target coordinate",
+    "scene graph",
+    "released peak_frame at inference"
+  ],
+  "model_file": "apex_detector_model_v1_1_0.npz",
+  "no_more_p0b_refinement": true,
+  "purpose": "Bounded local motion-only apex surrogate for training diagnostics and candidate reranking; not represented as the organizer's private detector.",
+  "release_note": "Public reference copy: local provenance fields removed; refer to docs/PROVENANCE.md for original SHA-256.",
+  "schema_version": "1.0.0",
+  "selected_metrics": {
+    "early_fraction": 0.4645544554455446,
+    "group_name": "overall",
+    "group_value": "overall",
+    "hold_hit_rate": 0.6427722772277228,
+    "late_fraction": 0.35287128712871285,
+    "mean_abs_error_frames": 11.141782178217822,
+    "mean_score1b_proxy20_at_detected": 0.7614977097689376,
+    "mean_signed_error_frames": -3.844356435643564,
+    "mean_stg_proxy_sigma10": 0.6153527869309873,
+    "mean_stg_proxy_sigma5": 0.5747593242197767,
+    "mean_temporal_proxy_sigma10": 0.7931326908157477,
+    "mean_temporal_proxy_sigma5": 0.738789085258908,
+    "median_abs_error_frames": 3.0,
+    "n": 2525,
+    "p90_abs_error_frames": 36.0,
+    "p95_abs_error_frames": 49.0,
+    "tail_gt10_fraction": 0.2902970297029703,
+    "tail_gt20_fraction": 0.18851485148514852,
+    "tail_gt30_fraction": 0.12871287128712872,
+    "variant": "phase_peak_soft__component",
+    "within_10_frames": 0.7097029702970297,
+    "within_1_frame": 0.39920792079207923,
+    "within_3_frames": 0.5354455445544555,
+    "within_5_frames": 0.5972277227722772
+  },
+  "selected_model": "phase_peak_soft",
+  "selected_selector": "component",
+  "status": "ADVISORY_ENSEMBLE_ONLY",
+  "version": "1.1.0"
+}

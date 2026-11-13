@@ -1,0 +1,25 @@
+{
+  "evaluation_representations": {
+    "official": "organizer server is the final source of truth",
+    "oracle_peak": "released peak_frame, diagnostic only",
+    "self_detected": "advisory P0B ensemble-selected frame"
+  },
+  "motion": {
+    "finite": "NaN and Inf are forbidden",
+    "length": "T must exactly equal clip_length",
+    "poses": {
+      "accepted_shapes": [
+        "(T,165)",
+        "(T,55,3)"
+      ],
+      "meaning": "SMPL-X axis-angle joint rotations"
+    },
+    "trans": {
+      "meaning": "global translation",
+      "required_shape": "(T,3)"
+    }
+  },
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "version": "1.0.0"
+}

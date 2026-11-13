@@ -1,0 +1,40 @@
+{
+  "excluded_in_v0": [
+    "scene graph",
+    "residual flow",
+    "listener state"
+  ],
+  "ik": "SMPL-X shape-aware local optimization of clavicle/shoulder/elbow/wrist around one clear apex/hold",
+  "name": "P0C RePointer-v0 retrieval + shape-aware IK",
+  "reranking": {
+    "advisory_temporal": [
+      "source logreg_raw",
+      "refined phase_peak_soft component",
+      "reach-stability heuristic"
+    ],
+    "guardrail": "temporal surrogate agreement is advisory, never represented as the private official detector",
+    "primary": [
+      "frozen spatial proxy",
+      "smoothness",
+      "joint limits",
+      "foot stability"
+    ]
+  },
+  "retrieval": {
+    "descriptor": [
+      "target azimuth",
+      "target elevation",
+      "target distance",
+      "clip length",
+      "apex ratio",
+      "hand"
+    ],
+    "no_same_fold": true,
+    "primary_motion_donors": "natural, same hand, training folds only",
+    "top_k": 8
+  },
+  "schema_version": "1.0.0",
+  "status": "READY_TO_IMPLEMENT",
+  "time_warp": "piecewise linear warp preserving donor apex and query planned apex",
+  "version": "1.0.0"
+}

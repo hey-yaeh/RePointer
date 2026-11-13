@@ -1,0 +1,6 @@
+# Template only. No machine-specific paths or assets are bundled.
+# Frozen scripts accept explicit CLI arguments rather than this file directly.
+dataset_root = "/PATH/TO/HSI_CHALLENGE_DATASET"
+smplx_model_dir = "/PATH/TO/LICENSED_SMPLX_MODELS"
+private_assets_root = "/PATH/TO/PRIVATE_REPOINTER_ASSETS"
+output_root = "/PATH/TO/REPOINTER_RUNS"

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repointer-research-code"
+version = "0.2.0.dev0"
+description = "RePointer modular research pipeline, synthetic fixtures and immutable experimental sources"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+timing = ["torch>=2.6,<3"]
+models = ["torch>=2.6,<3", "smplx>=0.1.28,<0.2"]
+config = ["tomli>=2; python_version < '3.11'"]
+test = ["pytest>=7"]
+
+[project.scripts]
+repointer = "repointer.cli:main"
+repointer-audit = "repointer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

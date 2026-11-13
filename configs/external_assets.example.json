@@ -1,0 +1,14 @@
+{
+  "schema": "repointer.external-assets.v1",
+  "paths": {
+    "m1_full_dir": "${REPOINTER_M1_FULL_DIR}",
+    "p0c0_dir": null,
+    "p1a_dir": null,
+    "p1_full_dir": null,
+    "p2a_dir": null,
+    "p2a_mh_dir": null,
+    "p2c0_dir": null,
+    "dataset_root": null,
+    "smplx_model_dir": null
+  }
+}

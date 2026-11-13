@@ -1,0 +1,27 @@
+{
+  "candidate_budget": {
+    "diagnostic_equal_budget": 8,
+    "primary": 1
+  },
+  "claim": "OmniControl-PT-style internal baseline; not an exact reproduction of unavailable official code/weights",
+  "excluded": [
+    "scene graph",
+    "target-distractor relations",
+    "multi-candidate learned reranking",
+    "residual flow"
+  ],
+  "motion_backend": "same frozen motion-template/retargeting backend used by P0C where possible, to isolate controller differences",
+  "name": "B0 modular target-control baseline",
+  "schema_version": "1.0.0",
+  "shared_inputs": [
+    "speech timing",
+    "active hand",
+    "target coordinates",
+    "body shape",
+    "clip length"
+  ],
+  "spatial_controller": "small MLP predicts elbow/wrist control anchors from target geometry and body shape",
+  "status": "READY_TO_IMPLEMENT",
+  "timing": "single deterministic speech-based timing heuristic; no learned phase model",
+  "version": "1.0.0"
+}

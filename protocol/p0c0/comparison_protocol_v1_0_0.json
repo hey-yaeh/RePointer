@@ -1,0 +1,51 @@
+{
+  "internal_p0c_success_gate": {
+    "note": "Internal scientific gate only; official server remains the final benchmark source of truth",
+    "required": [
+      "P0C mean self-detected Score1b > B0",
+      "P0C mean self-detected STG > B0",
+      "improvement direction positive in at least 4 of 5 folds",
+      "no material degradation in motion-quality diagnostics"
+    ]
+  },
+  "models": [
+    "B0 modular target-control baseline",
+    "P0C RePointer-v0"
+  ],
+  "report": {
+    "motion_quality": [
+      "joint jerk",
+      "foot sliding",
+      "joint-limit violations",
+      "pose deviation from donor"
+    ],
+    "primary_internal": [
+      "self-detected Score1b proxy20",
+      "self-detected STG proxy",
+      "oracle-peak Score1b proxy20",
+      "median and p90 angular error"
+    ],
+    "slices": [
+      "fold",
+      "natural/synthetic",
+      "left/right",
+      "target distance",
+      "target azimuth/elevation"
+    ],
+    "statistics": "paired per-sample differences with bootstrap confidence intervals; fold-level consistency"
+  },
+  "same_for_both": [
+    "five group-disjoint folds",
+    "source motion corpus",
+    "SMPL-X body models",
+    "output schema",
+    "spatial proxy",
+    "advisory temporal diagnostics",
+    "evaluation code",
+    "random seeds",
+    "maximum training data"
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "version": "1.0.0"
+}

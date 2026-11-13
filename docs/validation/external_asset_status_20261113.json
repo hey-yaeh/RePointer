@@ -1,0 +1,42 @@
+{
+  "assets": {
+    "dataset_root": {
+      "role": "Authorized HSI dataset, timed words, scenes and shape inputs",
+      "status": "unconfigured"
+    },
+    "m1_full_dir": {
+      "role": "Accepted M1 five-fold run directory, including aggregate/ and folds/",
+      "status": "directory_present"
+    },
+    "p0c0_dir": {
+      "role": "Private shared manifest, folds, holds and apex detector weights",
+      "status": "unconfigured"
+    },
+    "p1_full_dir": {
+      "role": "Accepted full timing-to-motion comparisons and audits",
+      "status": "unconfigured"
+    },
+    "p1a_dir": {
+      "role": "Five WordPhaseNet timing checkpoints and OOF evidence",
+      "status": "unconfigured"
+    },
+    "p2a_dir": {
+      "role": "Phase router models, routes and acceptance",
+      "status": "unconfigured"
+    },
+    "p2a_mh_dir": {
+      "role": "Multi-hypothesis distributions, rankers and acceptance",
+      "status": "unconfigured"
+    },
+    "p2c0_dir": {
+      "role": "Official test-input audit and acceptance",
+      "status": "unconfigured"
+    },
+    "smplx_model_dir": {
+      "role": "Separately licensed SMPL-X model directory",
+      "status": "unconfigured"
+    }
+  },
+  "full_reproduction_validated": false,
+  "schema": "repointer.external-asset-status.v1"
+}

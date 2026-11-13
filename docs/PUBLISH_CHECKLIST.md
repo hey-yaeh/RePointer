@@ -1,0 +1,25 @@
+# Publish checklist
+
+- [x] Locate frozen P0C0, M1, P1A, P2A, P2A-MH, P2C1, P2C2 source.
+- [x] Inventory and exclude labeled per-sample P0C0 manifest from public package.
+- [x] Exclude apex detectors, WordPhaseNet weights, router/ranker weights from public package.
+- [x] Create source CLI audit, synthetic SMPL-X output schema checks, and tests.
+- [x] Add modular implementation and portable configuration under `src/repointer/`.
+- [x] Run asset-free training/inference smoke and byte-preserving candidate selection.
+- [x] Add stage tests, frozen-function comparisons and local CI configuration.
+- [x] Document hidden artifact dependencies and remaining scientific parity gaps.
+- [x] Obtain owner's approval to publish RePointer-owned source under MIT.
+- [ ] Verify HSI redistribution and pretrained-checkpoint release permissions.
+- [x] Locate owner's licensed SMPL-X assets externally and validate real FK/IK; do not redistribute them.
+- [x] Locate and integrity-check the external M1 five-fold run without copying it.
+- [x] Add external configuration, read-only artifact audit and sanitized M1 reference.
+- [x] Locate original M1 pilot evidence externally.
+- [x] Locate P1_FULL and P2C0 artifacts/launchers externally.
+- [x] Validate core package installation/configuration in one local environment.
+- [x] Validate existing historical learned/body-model environment through real CPU replay.
+- [ ] Independently validate cleaned native backends with migrated checkpoints.
+- [x] Measure real CPU versus historical CUDA inference differences and verify all 100 selector choices.
+- [ ] Retrain the entire motion-training chain from scratch if claiming that reproduction scope.
+- [ ] Verify official benchmark reproduction and motion naturalness evidence separately.
+- [x] Obtain owner's authorization to create a Public GitHub repository.
+- [ ] Create the remote repository, upload the reviewed source and inspect remote CI.

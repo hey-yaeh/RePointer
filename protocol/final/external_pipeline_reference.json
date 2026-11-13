@@ -1,0 +1,67 @@
+{
+  "schema": "repointer.external-pipeline-reference.v1",
+  "date": "2026-11-13",
+  "distribution": "external_private_assets_not_bundled",
+  "official_server_scores_reproduced": false,
+  "stages": {
+    "p0c0_dir": {
+      "run_id": "20260810T184546Z",
+      "acceptance_status": "P0C0_SHARED_PROTOCOL_FROZEN",
+      "acceptance_sha256": "e5c3ff1b95f41d3d63067784ee505e35585d79f63722377b8e275495aa0fbbe2",
+      "manifest_sha256": "00a84588b5c67d294874b5393b447d60a9b6e86f416ee3153f89840b3dacc4dd"
+    },
+    "m1_pilot_dir": {
+      "run_id": "20260810T192309Z",
+      "acceptance_status": "B0_P0C_M1_PILOT_ACCEPTED_FULL_5FOLD_ALLOWED",
+      "acceptance_sha256": "27853aee6b1d6d902983f8a8d4c25702dd65bfaa18a9fe58ff9703b6b9a8738e",
+      "manifest_sha256": "7de0a00bcc352dc022175b6d0bbd064fa3209a46dfe9bab2f213f38b6f3f08f7"
+    },
+    "m1_full_dir": {
+      "run_id": "20260810T200141Z",
+      "acceptance_status": "B0_P0C_M1_FULL_5FOLD_ACCEPTED",
+      "acceptance_sha256": "86274ae4186e4f98f804d9f6b90669e042fe379e4b96a733493f01bc71c1aba5",
+      "manifest_sha256": "b65fad5d9a64f341ce678a355a4df226a85b1512ba912b5486562515e3d991cc"
+    },
+    "p1a_dir": {
+      "run_id": "20260810T205722Z",
+      "acceptance_status": "P1A_WORDPHASENET_ACCEPTED_P1_GENERATION_ALLOWED",
+      "acceptance_sha256": "e91059751e722343dee1984a83d13534ca6a26c951df6b532e01cafcc3d387af",
+      "manifest_sha256": "38c5bc55e2f641352356daad57f88d2ce27b344a6d3401043abced2e9f6fdfb1"
+    },
+    "p1_full_dir": {
+      "run_id": "20260811T081809Z",
+      "acceptance_status": "P1_WORDPHASE_FULL_OOF_ACCEPTED",
+      "acceptance_sha256": "43d2843393f2d95f336a31dd1080f4915ff54a42dad16e223d8d8f37717a64aa",
+      "manifest_sha256": "d8e2cdeb1a819dce0396bb2a67e83ac467a0ee9690846d2faff8a8970b29d2b5"
+    },
+    "p2a_dir": {
+      "run_id": "20260811T094444Z",
+      "acceptance_status": "P2A_PHASE_ROUTER_ACCEPTED",
+      "acceptance_sha256": "a3e2875e6e4324665a276d2842411861e63fc87c2f41381f30b9193fb69653ee",
+      "manifest_sha256": "b83659a3c93f71b0528d14da9caf42fca7f032fe28da1eb80e73874bae856a45"
+    },
+    "p2a_mh_dir": {
+      "run_id": "20260812T065037Z",
+      "acceptance_status": "P2A_MH_PILOT_ACCEPTED_FULL_OOF_ALLOWED",
+      "acceptance_sha256": "bdfc0762410103598890e0243115c656c6356f824b3dfed2cfb41f972372430b",
+      "manifest_sha256": "265a6c8bcc3f8fae38e59f5b9dc747a8dbb5e3b97482bcf8ae473bdf0b7d1ab8"
+    },
+    "p2c0_dir": {
+      "run_id": "20260812T080150Z",
+      "acceptance_status": "P2C0_OFFICIAL_TEST_PREFLIGHT_ACCEPTED_MATERIALIZATION_ALLOWED",
+      "acceptance_sha256": "5448c83067e618aec82efc616192999e69ca1c466c825dc6dcc44b3a26fcd0dc",
+      "manifest_sha256": "b64b8025f1ad847712bd91b3f113f4421fc1ee022e8d223d1eb63cfecfd013ac"
+    },
+    "p2c1_dir": {
+      "run_id": "20260812T143840Z",
+      "acceptance_status": "P2C1_OFFICIAL_TEST_MATERIALIZATION_COMPLETE",
+      "acceptance_sha256": "0be69531da7d7c6789106018077a5d8553523fab07332d545f3ebcdc948f5e54",
+      "manifest_sha256": "8f8aa2c979a036da7f97561608798317a146154e3e73fa909fa862079e3f6491"
+    },
+    "p2c2_dir": {
+      "run_id": "20260812T153130Z",
+      "acceptance_status": "P2C2_CANDIDATE_C_MATERIALIZATION_COMPLETE",
+      "acceptance_sha256": "cad50e97ff1bc41306e45614b149bc36336d7fda89ff55d249600cf7a78a656c"
+    }
+  }
+}

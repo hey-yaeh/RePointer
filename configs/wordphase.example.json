@@ -1,0 +1,16 @@
+{
+  "paths": {
+    "fixture_root": "${REPOINTER_PRIVATE_ROOT}/wordphase-fixture",
+    "checkpoint_root": "${REPOINTER_PRIVATE_ROOT}/wordphase-training",
+    "output_root": "${REPOINTER_PRIVATE_ROOT}/wordphase-inference"
+  },
+  "pipeline": {
+    "seed": 0,
+    "timing_backend": "wordphase",
+    "top_k": 2,
+    "donors_per_hypothesis": 2,
+    "hypotheses": 4,
+    "ik_steps": 6,
+    "epochs": 2
+  }
+}

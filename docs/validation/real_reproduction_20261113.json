@@ -1,0 +1,160 @@
+{
+  "schema": "repointer.real-reproduction-summary.v1",
+  "date": "2026-11-13",
+  "scope": "real_data_cpu_stage_retraining_and_pretrained_100_test_inference_replay",
+  "environment": {
+    "research_python": "3.9.23",
+    "torch": "2.5.1+cu118",
+    "device": "cpu",
+    "cuda_available": false,
+    "host_control_python": "3.12.3",
+    "research_environment_modified": false
+  },
+  "historical_inputs_located": {
+    "p0c0_dir": "20260810T184546Z",
+    "m1_full_dir": "20260810T200141Z",
+    "m1_pilot_dir": "20260810T192309Z",
+    "p1a_dir": "20260810T205722Z",
+    "p1_full_dir": "20260811T081809Z",
+    "p2a_dir": "20260811T094444Z",
+    "p2a_mh_dir": "20260812T065037Z",
+    "p2b_closeout_dir": "20260811T101415Z",
+    "p2c0_dir": "20260812T080150Z",
+    "p2c1_dir": "20260812T143840Z",
+    "p2c2_dir": "20260812T153130Z"
+  },
+  "p1a_training": {
+    "schema": "repointer.real-timing-training.v1",
+    "status": "P1A_WORDPHASENET_ACCEPTED_P1_GENERATION_ALLOWED",
+    "training_samples": 2525,
+    "folds": 5,
+    "epochs_per_fold": 60,
+    "trained_from_initialization": true,
+    "device": "cpu",
+    "historical_device": "cuda",
+    "exact_historical_training_parity_claimed": false,
+    "used_for_submission_replay": false,
+    "official_server_scores_reproduced": false,
+    "historical_cuda": {
+      "mean_abs_error_frames": 13.64950495049505,
+      "local_temporal_proxy_sigma5": 0.5928937650082742
+    },
+    "new_cpu": {
+      "mean_abs_error_frames": 13.624950495049506,
+      "local_temporal_proxy_sigma5": 0.5969404297176178
+    }
+  },
+  "p2a_training_parity": {
+    "schema": "repointer.real-p2a-reproduction.v1",
+    "status": "PASS",
+    "queries": 2525,
+    "router_choice_mismatches": 0,
+    "max_abs_oof_prediction_difference": 2.1316282072803006e-14,
+    "max_abs_model_parameter_difference": 2.4424906541753444e-15,
+    "model_metadata_equal": true,
+    "real_training_rerun": true,
+    "generation_rerun": false,
+    "official_scores_reproduced": false
+  },
+  "selector_using_historical_ab": {
+    "schema": "repointer.real-selector-reproduction.v1",
+    "status": "PASS",
+    "queries": 100,
+    "selector_choice_mismatches": 0,
+    "selected_motion_byte_matches": 100,
+    "candidate_b_selections": 14,
+    "real_smplx_forward_kinematics": true,
+    "motion_generation_rerun": false,
+    "official_local_validator_passed": true,
+    "official_server_scores_reproduced": false,
+    "device": "cpu"
+  },
+  "candidate_generation": {
+    "schema": "repointer.real-generation-reproduction.v1",
+    "device": "cpu",
+    "motion_generation_rerun": true,
+    "official_server_scores_reproduced": false,
+    "candidates": {
+      "candidate_a_p2a": {
+        "motions": 100,
+        "byte_identical_to_historical": 0,
+        "max_abs_pose_component_difference_rad": 1.7285346984863281e-06,
+        "mean_clip_pose_rmse_rad": 9.30289970865127e-09,
+        "max_abs_translation_component_difference": 1.1920928955078125e-07
+      },
+      "candidate_b_p2a_mh": {
+        "motions": 100,
+        "byte_identical_to_historical": 0,
+        "max_abs_pose_component_difference_rad": 2.1457672119140625e-06,
+        "mean_clip_pose_rmse_rad": 1.0856389611039888e-08,
+        "max_abs_translation_component_difference": 1.1920928955078125e-07
+      }
+    },
+    "candidate_a_phase_router_manifest": {
+      "router_choice": 0,
+      "selected_planned_frame": 0,
+      "selected_donor_id": 1
+    },
+    "candidate_b_selection_manifest": {
+      "choice_index": 0,
+      "selected_source": 0,
+      "selected_hypothesis": 0,
+      "selected_donor_id": 0,
+      "selected_donor_rank": 0
+    },
+    "official_local_validators_passed": true,
+    "changed_a_donor_alias_checks": [
+      {
+        "source_files": true,
+        "clip_segments": true,
+        "clip_length": true,
+        "global_start": true,
+        "global_end": true,
+        "released_peak_frame": true,
+        "hand": true
+      }
+    ]
+  },
+  "end_to_end_using_regenerated_ab": {
+    "schema": "repointer.real-end-to-end-inference.v1",
+    "device": "cpu",
+    "queries": 100,
+    "recomputed_timing_ensemble": true,
+    "regenerated_candidate_a_and_b": true,
+    "real_smplx_fk_and_ik": true,
+    "selector_choice_mismatches": 0,
+    "candidate_b_selections": 14,
+    "selected_files_exactly_copy_fresh_candidate": 100,
+    "byte_identical_to_historical_submission": 0,
+    "max_abs_pose_component_difference_rad": 1.7285346984863281e-06,
+    "mean_clip_pose_rmse_rad": 9.68599378998528e-09,
+    "max_abs_translation_component_difference": 1.1920928955078125e-07,
+    "official_local_validator_passed": true,
+    "official_server_scores_reproduced": false,
+    "training_from_scratch_entire_system": false
+  },
+  "original_workspace_modified": false,
+  "frozen_sources_modified": false,
+  "private_data_or_weights_bundled": false,
+  "official_server_scores_reproduced": false,
+  "entire_system_retrained_from_scratch": false,
+  "asset_manifest_notes": [
+    "P1A uses name entries rather than relative_path; all 19 bound files verified.",
+    "P2C1 LAUNCH_STATUS.txt differs from its historical manifest; scientific files match."
+  ],
+  "limitations": [
+    "New CPU timing models are a separate training experiment and are not used in the pretrained submission replay.",
+    "Historical M1/P1_FULL/MH training evidence and original WordPhaseNet weights are reused for the final inference replay.",
+    "CPU-generated arrays are numerically close to CUDA history and are not byte-identical.",
+    "No organizer-server evaluation, official score report verification or final-manuscript audit was performed."
+  ],
+  "timing_ensemble_parity": {
+    "test_expected_frame_mismatches": 0,
+    "max_abs_probability_difference": 8.788704872131348e-05
+  },
+  "full_ranker_training_parity": {
+    "max_abs_parameter_difference": 3.4416913763379853e-15,
+    "replacement_threshold_difference": 0.0,
+    "training_evidence": "verified_historical_oof_candidates"
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-13",
+  "scope": "synthetic_package_tests_and_real_cpu_historical_stage_reproduction",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "pytest": "7.4.4",
+    "torch_available": false,
+    "smplx_available": false
+  },
+  "pytest": {
+    "command": "python3 -m pytest -q",
+    "passed": 286,
+    "skipped": 1,
+    "skip_reason": "PyTorch learned training/checkpoint round trip unavailable"
+  },
+  "source_audit": {
+    "command": "PYTHONPATH=src python3 -m repointer audit-source",
+    "files": 8,
+    "sha256_match": true,
+    "size_match": true,
+    "syntax_valid": true,
+    "unexpected_files": 0
+  },
+  "synthetic_smoke": {
+    "command": "PYTHONPATH=src python3 -m repointer smoke --config outputs/real-replay-support-smoke/config.json",
+    "status": "SYNTHETIC_SMOKE_PASSED",
+    "training_queries": 8,
+    "folds": 3,
+    "inference_queries": 2,
+    "candidate_b_budget": 8,
+    "timing_backend": "synthetic-prior",
+    "selected_files_byte_identical_to_a_or_b": true,
+    "local_zip_schema_valid": true,
+    "artifacts": "outputs/real-replay-support-smoke",
+    "kinematics": "synthetic-skeleton",
+    "detectors": "synthetic-motion-heuristics"
+  },
+  "packaging": {
+    "editable_install": "passed; --no-deps --no-build-isolation in temporary venv with system packages",
+    "wheel_build": "passed; no dependencies downloaded",
+    "source_distribution": "built and inspected separately",
+    "organization_checks": {
+      "source_build": "passed",
+      "wheel_build": "passed",
+      "external_asset_modules_and_templates_included": true,
+      "private_configs_excluded": true,
+      "data_weights_credentials_excluded": true,
+      "frozen_source_hashes_preserved": true
+    }
+  },
+  "official_validator_run": true,
+  "licensed_smplx_run": true,
+  "learned_wordphase_training_run": true,
+  "paper_results_reproduced": false,
+  "github_push": false,
+  "license_selected": true,
+  "git_metadata_available": false,
+  "historical_archive_record_note": "The following incoming record describes earlier private companion checks. Those assets are absent here and were not rechecked in this cleanup.",
+  "historical_archive_record": {
+    "p0c0_run": "20260810T184546Z",
+    "p0c0_sample_count": 2525,
+    "p0c0_acceptance_status": "P0C0_SHARED_PROTOCOL_FROZEN",
+    "p0c0_frozen_asset_checks": [
+      {
+        "name": "fold_assignments.csv",
+        "exists": true,
+        "sha256_matches": true,
+        "size_matches": true
+      },
+      {
+        "name": "split_integrity.json",
+        "exists": true,
+        "sha256_matches": true,
+        "size_matches": true
+      },
+      {
+        "name": "hold_region_manifest.csv",
+        "exists": true,
+        "sha256_matches": true,
+        "size_matches": true
+      },
+      {
+        "name": "spatial_proxy_contract_v1_0_0.json",
+        "exists": true,
+        "sha256_matches": true,
+        "size_matches": true
+      },
+      {
+        "name": "temporal_proxy_contract_v1_1_0.json",
+        "exists": true,
+        "sha256_matches": true,
+        "size_matches": true
+      },
+      {
+        "name": "apex_detector_model_v1_0_0.npz",
+        "exists": true,
+        "sha256_matches": true,
+        "size_matches": true
+      },
+      {
+        "name": "apex_detector_model_v1_1_0.npz",
+        "exists": true,
+        "sha256_matches": true,
+        "size_matches": true
+      }
+    ],
+    "source_file_count": 8,
+    "public_contains_model_weights": false,
+    "public_contains_sample_manifest": false,
+    "compileall": {
+      "pass": true,
+      "stdout": ""
+    },
+    "pytest": {
+      "pass": true,
+      "stdout": ".....                                                                    [100%]\n5 passed in 0.20s\n"
+    },
+    "private_asset_files": 40,
+    "source_only_status": "not_end_to_end_executable_without_historical_artifacts_and_licensed_models",
+    "frozen_cli_help": {
+      "pass": true,
+      "count": 8,
+      "note": "Each frozen script launched with --help without error in the local environment. This is not an inference run."
+    }
+  },
+  "previous_core_validation": {
+    "date": "2026-11-12",
+    "scope": "cleaned_package_and_synthetic_fixtures_only",
+    "pytest": {
+      "command": "python3 -m pytest -q",
+      "passed": 255,
+      "skipped": 1,
+      "skip_reason": "PyTorch learned training/checkpoint round trip unavailable"
+    },
+    "synthetic_smoke": {
+      "command": "repointer smoke --config outputs/validation-smoke/config.json",
+      "status": "SYNTHETIC_SMOKE_PASSED",
+      "training_queries": 8,
+      "folds": 3,
+      "inference_queries": 2,
+      "candidate_b_budget": 8,
+      "timing_backend": "synthetic-prior",
+      "selected_files_byte_identical_to_a_or_b": true,
+      "local_zip_schema_valid": true,
+      "artifacts": "outputs/validation-smoke",
+      "kinematics": "synthetic-skeleton",
+      "detectors": "synthetic-motion-heuristics"
+    },
+    "packaging": {
+      "editable_install": "passed; --no-deps --no-build-isolation in temporary venv with system packages",
+      "wheel_build": "passed; no dependencies downloaded",
+      "source_distribution": "built and inspected separately"
+    }
+  },
+  "external_m1_audit": {
+    "report": "docs/validation/m1_external_audit_20261113.json",
+    "reference": "protocol/m1/external_run_reference.json",
+    "command": "PYTHONPATH=src python3 -m repointer audit-m1 --config configs/external_assets.example.json --reference protocol/m1/external_run_reference.json --verify-hashes --verify-motions",
+    "status": "PASS",
+    "manifest_files_checked": 7692,
+    "motion_hashes_and_schemas_checked": 7575,
+    "scientific_file_errors": 0,
+    "append_only_log_warnings": 6,
+    "historical_assets_modified": false,
+    "data_or_weights_copied_into_source": false,
+    "generation_rerun": false,
+    "official_evaluation_run": false
+  },
+  "external_asset_status_report": "docs/validation/external_asset_status_20261113.json",
+  "previous_organization_validation": {
+    "scope": "cleaned_package_synthetic_workflow_and_external_read_only_m1_audit",
+    "pytest": {
+      "command": "python3 -m pytest -q",
+      "passed": 276,
+      "skipped": 1,
+      "skip_reason": "PyTorch learned training/checkpoint round trip unavailable"
+    },
+    "synthetic_smoke": {
+      "command": "PYTHONPATH=src python3 -m repointer smoke --config outputs/organization-validation-current/config.json",
+      "status": "SYNTHETIC_SMOKE_PASSED",
+      "training_queries": 8,
+      "folds": 3,
+      "inference_queries": 2,
+      "candidate_b_budget": 8,
+      "timing_backend": "synthetic-prior",
+      "selected_files_byte_identical_to_a_or_b": true,
+      "local_zip_schema_valid": true,
+      "artifacts": "outputs/organization-validation-current",
+      "kinematics": "synthetic-skeleton",
+      "detectors": "synthetic-motion-heuristics"
+    },
+    "licensed_smplx_run": false,
+    "learned_wordphase_training_run": false,
+    "official_validator_run": false
+  },
+  "official_server_scores_reproduced": false,
+  "real_reproduction_report": "docs/validation/real_reproduction_20261113.json",
+  "external_pipeline_reference": "protocol/final/external_pipeline_reference.json",
+  "real_cli_replay_verified_stages": [
+    "p2a",
+    "p2c2"
+  ],
+  "real_generation_chain_note": "P2C1 and final P2C2 also ran via equivalent direct frozen-stage commands; all raw artifacts remain external.",
+  "source_license": "MIT",
+  "public_source_publication_owner_approved": true,
+  "github_repository_created": false
+}

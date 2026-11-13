@@ -1,0 +1,15 @@
+include README.md LICENSE .gitignore
+recursive-include .github *.yml *.yaml
+recursive-include configs *.json *.toml
+recursive-include docs *.md *.json
+recursive-include protocol *.json
+recursive-include frozen *.py
+recursive-include tests *.py
+prune outputs
+prune private
+prune private_assets
+prune data
+prune checkpoints
+global-exclude *.npz *.npy *.pt *.pth *.pkl *.ckpt *.pyc .env *.local.json *.local.toml
+global-exclude *.csv *.tsv *.safetensors *.onnx *.h5 *.hdf5 *.bin *.pem *.key *.p12
+global-exclude *.private.json *.private.toml

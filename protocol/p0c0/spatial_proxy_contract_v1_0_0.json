@@ -1,0 +1,60 @@
+{
+  "active_hand_encoding": {
+    "0": "left",
+    "1": "right"
+  },
+  "created_utc": "2026-08-10T14:45:01+00:00",
+  "exact_private_scorer_recovered": false,
+  "exact_released_alignment_angle_generator_recovered": false,
+  "kinematics": {
+    "body_model": "SMPL-X",
+    "center_angle_deg": "acos(clamp(dot(unit(ray_direction), unit(target_vector)), -1, 1)) in degrees",
+    "ray_direction": "active_wrist_joint - active_elbow_joint",
+    "ray_origin": "active_elbow_joint",
+    "target_vector": "target_center - active_elbow_joint"
+  },
+  "known_limitations": [
+    "The organizer scorer is private/server-side, so exact formula identity cannot be certified locally.",
+    "The smooth bounding-sphere margin is an approximation to an extent-aware AABB scorer.",
+    "Natural and synthetic released alignment labels show materially different distributions and are not reproduced by one common hypothesis.",
+    "Use official server results, when available, as the final source of truth."
+  ],
+  "purpose": "A transparent, differentiable local proxy aligned with the benchmark paper. It is used for training, validation, candidate reranking, and ablation—not represented as the private server scorer.",
+  "release_note": "Public reference copy: local provenance fields removed; refer to docs/PROVENANCE.md for original SHA-256.",
+  "schema_version": "1.0.0",
+  "scores": {
+    "challenge_score1b_proxy": {
+      "formula": "exp(-(effective_angle_deg**2)/(2*sigma_deg**2))",
+      "sigma_deg": 20.0
+    },
+    "released_label_diagnostic": {
+      "formula": "exp(-(effective_angle_deg**2)/(2*sigma_deg**2))",
+      "sigma_deg": 15.000000001453552
+    }
+  },
+  "status": "FROZEN_PAPER_FAITHFUL_PROXY",
+  "target_geometry": {
+    "auxiliary_non_primary_metrics": [
+      "ray-AABB first-hit indicator",
+      "sampled AABB minimum angular error",
+      "point-only forearm angular error"
+    ],
+    "natural_primary": {
+      "angular_margin_deg": "asin(clamp(half_diagonal / elbow_to_center_distance, 0, 1)) in degrees",
+      "candidate_id_evidence": "d+3|elbow_to_wrist|to@ray_start|scene_bbox_or_annotation_pelvis|sphere_diag_asin",
+      "center": "matched scene target AABB center when available; otherwise released target_world_xyz",
+      "effective_angle_deg": "max(0, center_angle_deg - angular_margin_deg)",
+      "extent": "AABB half-diagonal bounding sphere"
+    },
+    "synthetic_primary": {
+      "center": "released target point reconstructed from target_pelvis coordinates and the disclosed reference pelvis",
+      "effective_angle_deg": "center_angle_deg",
+      "extent": "point target unless a valid target AABB is available"
+    }
+  },
+  "temporal_contract": {
+    "evaluation_frame": "apex frame supplied by the frozen P0B detector surrogate or by an explicit oracle diagnostic",
+    "fixed_peak_offset": null,
+    "warning": "The P0A audit optimum at released peak_frame +3 is not frozen as an official offset. It is evidence about the released annotation pipeline, not a rule for generated motion."
+  }
+}

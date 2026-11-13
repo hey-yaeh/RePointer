@@ -1,0 +1,19 @@
+{
+  "paths": {
+    "fixture_root": "../outputs/synthetic-fixture",
+    "checkpoint_root": "../outputs/synthetic-training",
+    "output_root": "../outputs/synthetic-inference"
+  },
+  "pipeline": {
+    "seed": 0,
+    "timing_backend": "synthetic-prior",
+    "top_k": 2,
+    "donors_per_hypothesis": 2,
+    "hypotheses": 4,
+    "ik_steps": 6,
+    "hold_plateau": 5,
+    "hold_taper": 8,
+    "epochs": 2,
+    "selector_threshold": 0.001
+  }
+}

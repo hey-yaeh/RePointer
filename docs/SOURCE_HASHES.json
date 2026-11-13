@@ -1,0 +1,77 @@
+{
+  "source_manifest": [
+    {
+      "stage": "01_m1_worker",
+      "name": "repointer_b0_p0c_m1_full_fold_v0_2_0.py",
+      "source_archive": "RePointer_M1_worker_source.zip",
+      "original_sha256": "d5be82f7d2e2d9f3d070542331adccd71610d41ce373fc4f1bb23874fc9672f5",
+      "source_only_sha256": "6c63a37132ba5e2d0bbf84dff9713bbf677ada7ea3f15baa6688e1fb1f4c1d63",
+      "sanitized": true,
+      "bytes": 93055,
+      "path": "frozen/m1/repointer_b0_p0c_m1_full_fold_v0_2_0.py"
+    },
+    {
+      "stage": "02_m1_aggregate",
+      "name": "repointer_b0_p0c_m1_full_5fold_aggregate_v0_2_0.py",
+      "source_archive": "repointer_b0_p0c_m1_full_5fold_aggregate_v0_2_0.py",
+      "original_sha256": "9289b3e4ddf1b7f32f6038de578b21b021783488cb1951761f178ee0af96f74b",
+      "source_only_sha256": "9289b3e4ddf1b7f32f6038de578b21b021783488cb1951761f178ee0af96f74b",
+      "sanitized": false,
+      "bytes": 36651,
+      "path": "frozen/m1/repointer_b0_p0c_m1_full_5fold_aggregate_v0_2_0.py"
+    },
+    {
+      "stage": "03_wordphasenet",
+      "name": "repointer_p1a_wordphase_timing_oof_v0_1_0.py",
+      "source_archive": "p1a_wordphase_timing_oof.zip",
+      "original_sha256": "eb71f338d28420386e4152b7e96f2441f8f8d8fa032be84381c4836e43eb1fb8",
+      "source_only_sha256": "eb71f338d28420386e4152b7e96f2441f8f8d8fa032be84381c4836e43eb1fb8",
+      "sanitized": false,
+      "bytes": 38545,
+      "path": "frozen/timing/repointer_p1a_wordphase_timing_oof_v0_1_0.py"
+    },
+    {
+      "stage": "04_candidate_a",
+      "name": "repointer_p2a_phase_router_oof_v0_1_0.py",
+      "source_archive": "p2a_phase_router_oof.zip",
+      "original_sha256": "55a5b331153af25b29ed6aa7f3d1e80afb08f2447cadf1da764206f87a0f2250",
+      "source_only_sha256": "55a5b331153af25b29ed6aa7f3d1e80afb08f2447cadf1da764206f87a0f2250",
+      "sanitized": false,
+      "bytes": 30370,
+      "path": "frozen/candidates/repointer_p2a_phase_router_oof_v0_1_0.py"
+    },
+    {
+      "stage": "05_candidate_b",
+      "name": "repointer_p2a_mh_multi_hypothesis_timing_pilot_v0_1_2.py",
+      "source_archive": "p2a_mh_multi_hypothesis_timing_pilot.zip",
+      "original_sha256": "10c53a3a0ca8ab87c92165603c884244135d90c74a3bff40ab9cc9205761d2ac",
+      "source_only_sha256": "10c53a3a0ca8ab87c92165603c884244135d90c74a3bff40ab9cc9205761d2ac",
+      "sanitized": false,
+      "bytes": 94705,
+      "path": "frozen/candidates/repointer_p2a_mh_multi_hypothesis_timing_pilot_v0_1_2.py"
+    },
+    {
+      "stage": "06_test_materialization",
+      "name": "repointer_p2c1_official_test_materialization_v0_1_0.py",
+      "source_archive": "p2c1_official_test_materialization.zip",
+      "original_sha256": "9bffba92d2d218c625360dd72ae5caf3c05bacb652622523d752b279354f2282",
+      "source_only_sha256": "9bffba92d2d218c625360dd72ae5caf3c05bacb652622523d752b279354f2282",
+      "sanitized": false,
+      "bytes": 81070,
+      "path": "frozen/challenge/repointer_p2c1_official_test_materialization_v0_1_0.py"
+    },
+    {
+      "stage": "07_final_selector",
+      "name": "repointer_p2c2_spatial_first_detector_robust_candidate_c_v0_1_0.py",
+      "source_archive": "p2c2_spatial_first_detector_robust_candidate_c(1).zip",
+      "original_sha256": "64daa1641ee70f8a880afec4d50167297919d7b90b4f843a922aefd0a9b243f9",
+      "source_only_sha256": "64daa1641ee70f8a880afec4d50167297919d7b90b4f843a922aefd0a9b243f9",
+      "sanitized": false,
+      "bytes": 41758,
+      "path": "frozen/selector/repointer_p2c2_spatial_first_detector_robust_candidate_c_v0_1_0.py"
+    }
+  ],
+  "notes": [
+    "Exact frozen hash is for the original archived code. Public M1 removes three local SMPL-X search path entries. All other scripts are byte-for-byte copied from the identified archives."
+  ]
+}

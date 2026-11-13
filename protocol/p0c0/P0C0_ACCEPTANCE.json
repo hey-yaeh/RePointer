@@ -1,0 +1,27 @@
+{
+  "b0_allowed": true,
+  "created_utc": "2026-08-10T18:45:47+00:00",
+  "donor_pool_gate": "PASS",
+  "fold_count": 5,
+  "further_p0b_refinement_allowed": false,
+  "gates": {
+    "no_duplicate_leak": true,
+    "no_group_leak": true,
+    "no_recording_leak": true,
+    "p0a_proxy_frozen": true,
+    "p0b_r1_allows_p0c": true,
+    "p0b_refinement_closed": true,
+    "private_scorers_not_claimed": true,
+    "spatial_contract_frozen": true,
+    "split_pass": true,
+    "temporal_proxy_advisory_or_frozen": true
+  },
+  "join_gate": "PASS",
+  "next_action": "Implement and run B0 and P0C-M1 generation in parallel under the frozen comparison protocol.",
+  "p0c_m1_allowed": true,
+  "sample_count": 2525,
+  "schema_version": "1.0.0",
+  "source_file_gate": "PASS",
+  "status": "P0C0_SHARED_PROTOCOL_FROZEN",
+  "version": "1.0.0"
+}
