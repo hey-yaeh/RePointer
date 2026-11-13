@@ -51,7 +51,8 @@ No usable Git history is available in the supplied checkout: `.git` is an empty,
 read-only directory. Repository organization and package checks can proceed, but
 creating commits in that directory requires writable Git metadata. An independent
 local source snapshot and verified Git bundle have been prepared. The owner approved
-MIT licensing and public source publication; remote creation is tracked separately.
+MIT licensing and public source publication. The public source is hosted at
+[hey-yaeh/RePointer](https://github.com/hey-yaeh/RePointer).
 
 ## Reproduction entry points
 

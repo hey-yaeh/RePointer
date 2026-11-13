@@ -91,4 +91,5 @@ Remaining work:
   MIT licensing and public source publication are owner-approved. Third-party asset
   redistribution still needs separate permission. The supplied `.git` remains
   read-only; an independent local commit and Git bundle preserve the source snapshot.
-  Remote repository creation/upload and CI verification are still pending.
+  Reviewed source is published at [hey-yaeh/RePointer](https://github.com/hey-yaeh/RePointer),
+  with continuous validation tracked in [GitHub Actions](https://github.com/hey-yaeh/RePointer/actions).

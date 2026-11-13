@@ -22,4 +22,5 @@
 - [ ] Retrain the entire motion-training chain from scratch if claiming that reproduction scope.
 - [ ] Verify official benchmark reproduction and motion naturalness evidence separately.
 - [x] Obtain owner's authorization to create a Public GitHub repository.
-- [ ] Create the remote repository, upload the reviewed source and inspect remote CI.
+- [x] Create the remote repository and upload the reviewed source to [hey-yaeh/RePointer](https://github.com/hey-yaeh/RePointer).
+- [x] Inspect remote CI runs in [GitHub Actions](https://github.com/hey-yaeh/RePointer/actions).

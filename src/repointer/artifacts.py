@@ -108,7 +108,10 @@ class _Audit:
 
 def _motion_schema(payload: bytes, frames: int) -> bool:
     try:
-        with np.load(io.BytesIO(payload), allow_pickle=False) as data:
+        data = np.load(io.BytesIO(payload), allow_pickle=False)
+        if isinstance(data, np.ndarray):
+            return False
+        with data:
             if sorted(data.files) != ["poses", "trans"]:
                 return False
             poses, trans = data["poses"], data["trans"]

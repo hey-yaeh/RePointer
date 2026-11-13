@@ -53,7 +53,7 @@
   "licensed_smplx_run": true,
   "learned_wordphase_training_run": true,
   "paper_results_reproduced": false,
-  "github_push": false,
+  "github_push": true,
   "license_selected": true,
   "git_metadata_available": false,
   "historical_archive_record_note": "The following incoming record describes earlier private companion checks. Those assets are absent here and were not rechecked in this cleanup.",
@@ -204,5 +204,7 @@
   "real_generation_chain_note": "P2C1 and final P2C2 also ran via equivalent direct frozen-stage commands; all raw artifacts remain external.",
   "source_license": "MIT",
   "public_source_publication_owner_approved": true,
-  "github_repository_created": false
+  "github_repository_created": true,
+  "github_repository_url": "https://github.com/hey-yaeh/RePointer",
+  "github_actions_url": "https://github.com/hey-yaeh/RePointer/actions"
 }
